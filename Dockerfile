@@ -12,6 +12,9 @@ RUN cat ${TOMCAT_HOME}/webapps/bps.s* > ${TOMCAT_HOME}/webapps/bps.tar.gz && \
 	cat ${TOMCAT_HOME}/webapps/workspace.s* > ${TOMCAT_HOME}/webapps/workspace.tar.gz && \
 	cat ${TOMCAT_HOME}/webapps/governor.s* > ${TOMCAT_HOME}/webapps/governor.tar.gz && \
 	rm ${TOMCAT_HOME}/webapps/*.s* && \
+	mkdir ${TOMCAT_HOME}/webapps/bps && \
+	mkdir ${TOMCAT_HOME}/webapps/workspace && \
+	mkdir ${TOMCAT_HOME}/webapps/governor && \
 	tar -xzvf ${TOMCAT_HOME}/webapps/bps.tar.gz -C ${TOMCAT_HOME}/webapps/bps && \
 	tar -xzvf ${TOMCAT_HOME}/webapps/workspace.tar.gz -C ${TOMCAT_HOME}/webapps/workspace && \
 	tar -xzvf ${TOMCAT_HOME}/webapps/governor.tar.gz -C ${TOMCAT_HOME}/webapps/governor && \
