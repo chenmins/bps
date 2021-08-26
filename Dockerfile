@@ -20,10 +20,10 @@ RUN cat ${TOMCAT_HOME}/webapps/bps.s* > ${TOMCAT_HOME}/webapps/bps.tar.gz && \
     tar -xzvf ${TOMCAT_HOME}/webapps/governor.tar.gz -C ${TOMCAT_HOME}/webapps/governor && \
     rm ${TOMCAT_HOME}/webapps/*.gz 
 
-ADD *.sh /opt
-ADD primetonlicense.xml /opt/tomcat/webapps/bps/WEB-INF/_srv
-ADD primetonlicense.xml /opt/tomcat/webapps/workspace/WEB-INF/_srv
-ADD primetonlicense.xml /opt/tomcat/webapps/governor/WEB-INF/_srv
+ADD *.sh /opt/
+ADD primetonlicense.xml /opt/tomcat/webapps/bps/WEB-INF/_srv/
+ADD primetonlicense.xml /opt/tomcat/webapps/workspace/WEB-INF/_srv/
+ADD primetonlicense.xml /opt/tomcat/webapps/governor/WEB-INF/_srv/
 
 RUN chmod 755 /opt/*.sh && \
     mkdir /opt/apps_config && \
